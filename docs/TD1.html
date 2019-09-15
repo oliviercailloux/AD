@@ -492,7 +492,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Calculez la covariance et la corrélation linéaire entre \(x^1\) et \(x^2\). Commentez.</p>
 </li>
 <li>
-<p>Si on ajoute un 7ème individu \$((x^1, x^2), (10, 10))\$, que peut-on dire du coefficient de corrélation linéaire? (refaire les calculs dans 2 et 3).</p>
+<p>Si on ajoute un 7ème individu \$((x^1, x^2), (10, 10))\$, que peut-on dire du coefficient de corrélation linéaire? Refaire les calculs dans 2 et 3.</p>
 </li>
 </ol>
 </div>
@@ -510,8 +510,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_exercice_3">Exercice 3</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Soit \(Z = [z_{ij}]\) la matrice de données centrées réduites : \(z_{ij}\) = \(\frac{x_{ij} - \overline{x}^j}{ \sigma_{x^j}}\) .
-Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des données brutes.</p>
+<p>Soit \(Z = [z_{ij}]\) la matrice de données centrées réduites : \(z_{ij}\) = \(\frac{x_{ij} - \overline{x}^j}{ \sigma_{x^j}}\).
+Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des données brutes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Obtenez une matrice Y égale à X centrée, par multiplication matricielle</p>
+</li>
+<li>
+<p>Obtenez la matrice V de variance-covariance de X</p>
+</li>
+<li>
+<p>En utilisant les valeurs \(\sigma_{x^j}\), obtenez \(Z\) par multiplication matricielle de Y</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Astuce : commencez par considérer une matrice d’une seule colonne.</p>
 </div>
 </div>
 </div>
@@ -519,8 +535,7 @@ Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des donn
 <h2 id="_exercice_4">Exercice 4</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On s&#8217;intéresse aux prix de 3 articles \(a_1\), \(a_2\), \(a_3\) (exemple : lait, pain, fromage) dans deux
-magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.</p>
+<p>On s&#8217;intéresse aux prix de 3 articles \(a_1\), \(a_2\), \(a_3\) (exemple : lait, pain, fromage) dans deux magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Données Ex 4</caption>
@@ -575,7 +590,7 @@ magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-15 23:10:07 +0200
+Last updated 2019-09-15 23:38:49 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
