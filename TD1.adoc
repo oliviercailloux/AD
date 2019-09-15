@@ -22,11 +22,11 @@ Soient \(z^1\) et \(z^2\) deux variables obtenues par centrage et réduction de 
 Soit \(Z = [z_{ij}]\) la matrice de données centrées réduites : \(z_{ij}\) = \(\frac{x_{ij} - \overline{x}^j}{ \sigma_{x^j}}\).
 Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des données brutes :
 
-* obtenez une matrice Y égale à X centrée, par multiplication matricielle ;
-* obtenez la matrice V de variance-covariance de X ;
-* en utilisant les valeurs \(\sigma_{x^j}\), obtenez \(Z\) par multiplication matricielle de Y.
+* obtenez une matrice \(Y\) égale à \(X\) centrée, par multiplication matricielle ;
+* obtenez la matrice \(V\) de variance-covariance de \(X\) ;
+* en utilisant les valeurs \(\sigma_{x^j}\), obtenez \(Z\) par multiplication matricielle de \(Y\).
 
-Astuce : commencez par considérer une matrice d’une seule colonne.
+Astuce : commencez par considérer une matrice \(X\) d’une seule colonne.
 
 == Exercice 4
 On s'intéresse aux prix de 3 articles \(a_1\), \(a_2\), \(a_3\) (exemple : lait, pain, fromage) dans deux magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.
