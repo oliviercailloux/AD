@@ -1,0 +1,8 @@
+= Analyse de données
+Ce cours d’analyse de données utilise des supports créés par Jamal Atif. Nous avons légèrement modifié certains TDs. Il est publié ici sous licence libre avec la permission des auteurs. Prière de citer Jamal Atif, Université Paris-Dauphine et de renvoyer par lien ici si vous réutilisez ces supports.
+
+== Références
+* http://www.lpsm.paris/pageperso/guyader/polysM.html[Régression Linéaire], cours de Guyader, dont ce cours s’inspire
+* https://link.springer.com/book/10.1007/978-2-8178-0184-1[Régression avec R], dont le cours de Guyader s’inspire
+* https://www.lamsade.dauphine.fr/~atif/doku.php?id=teaching:l3[Page] de Jamal Atif, où on trouve les diapos de cours
+

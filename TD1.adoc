@@ -1,0 +1,40 @@
+= TD1
+:stem: latexmath
+
+== Exercice 1
+Soit le tableau de données suivant.
+
+.Données Ex 1
+[%header, format=csv]
+|===
+include::1.1.csv[]
+|===
+
+. Représentez graphiquement le nuage de points correspondant.
+. Calculez la moyenne, la variance et l'écart-type de \(x^1\) et \(x^2\).
+. Calculez la covariance et la corrélation linéaire entre \(x^1\) et \(x^2\). Commentez.
+. Si on ajoute un 7ème individu asciimath:[((x^1, x^2), (10, 10))], que peut-on dire du coefficient de corrélation linéaire? (refaire les calculs dans 2 et 3).
+
+== Exercice 2
+Soient \(z^1\) et \(z^2\) deux variables obtenues par centrage et réduction de \(x^1\) et \(x^2\). Donnez l'expression de \(ρ_{z^1 z^2}\) en fonction de \(ρ_{x^1 x^2}\).
+
+== Exercice 3
+Soit \(Z = [z_{ij}]\) la matrice de données centrées réduites : \(z_{ij}\) = \(\frac{x_{ij} - \overline{x}^j}{ \sigma_{x^j}}\) .
+Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des données brutes.
+
+== Exercice 4
+On s'intéresse aux prix de 3 articles \(a_1\), \(a_2\), \(a_3\) (exemple : lait, pain, fromage) dans deux
+magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.
+
+.Données Ex 4
+[%header, format=csv]
+|===
+include::1.4.csv[]
+|===
+
+Calculez :
+
+. la matrice Y des données centrées,
+. la matrice des variances-covariances,
+. la matrice de corrélations.
+
