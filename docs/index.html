@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<title>TD1</title>
+<meta name="author" content="Ce cours d’analyse de données utilise des supports créés par Jamal Atif. Nous avons légèrement modifié certains TDs. Il est publié ici sous licence libre avec la permission des auteurs. Prière de citer Jamal Atif, Université Paris-Dauphine et de renvoyer par lien ici si vous réutilisez ces supports.">
+<title>Analyse de données</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -432,182 +433,53 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>TD1</h1>
+<h1>Analyse de données</h1>
+<div class="details">
+<span id="author" class="author">Ce cours d’analyse de données utilise des supports créés par Jamal Atif. Nous avons légèrement modifié certains TDs. Il est publié ici sous licence libre avec la permission des auteurs. Prière de citer Jamal Atif, Université Paris-Dauphine et de renvoyer par lien ici si vous réutilisez ces supports.</span><br>
+</div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_exercice_1">Exercice 1</h2>
+<h2 id="_tds">TDs</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Soit le tableau de données suivant.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Données Ex 1</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">\(x^1\)</th>
-<th class="tableblock halign-left valign-top">\(x^2\)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Représentez graphiquement le nuage de points correspondant.</p>
-</li>
-<li>
-<p>Calculez la moyenne, la variance et l&#8217;écart-type de \(x^1\) et \(x^2\).</p>
-</li>
-<li>
-<p>Calculez la covariance et la corrélation linéaire entre \(x^1\) et \(x^2\). Commentez.</p>
-</li>
-<li>
-<p>Si on ajoute un 7ème individu \$((x^1, x^2), (10, 10))\$, que peut-on dire du coefficient de corrélation linéaire? Refaire les calculs dans 2 et 3.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_exercice_2">Exercice 2</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Soient \(z^1\) et \(z^2\) deux variables obtenues par centrage et réduction de \(x^1\) et \(x^2\). Donnez l&#8217;expression de \(ρ_{z^1 z^2}\) en fonction de \(ρ_{x^1 x^2}\).</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_exercice_3">Exercice 3</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Soit \(Z = [z_{ij}]\) la matrice de données centrées réduites : \(z_{ij}\) = \(\frac{x_{ij} - \overline{x}^j}{ \sigma_{x^j}}\).
-Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des données brutes :</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>obtenez une matrice \(Y\) égale à \(X\) centrée, par multiplication matricielle ;</p>
+<p><a href="https://oliviercailloux.github.io/AD/TD1.html">TD1</a></p>
 </li>
 <li>
-<p>obtenez la matrice \(V\) de variance-covariance de \(X\) ;</p>
+<p><a href="https://www.lamsade.dauphine.fr/~atif/lib/exe/fetch.php?media=teaching:ad-td2.pdf">TD2</a></p>
 </li>
 <li>
-<p>en utilisant les valeurs \(\sigma_{x^j}\), obtenez \(Z\) par multiplication matricielle de \(Y\).</p>
+<p><a href="https://oliviercailloux.github.io/AD/TD3.html">TD3</a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Astuce : commencez par considérer une matrice \(X\) d’une seule colonne.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exercice_4">Exercice 4</h2>
+<h2 id="_références">Références</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>On s&#8217;intéresse aux prix de 3 articles \(a_1\), \(a_2\), \(a_3\) (exemple : lait, pain, fromage) dans deux magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Données Ex 4</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">\(m_1\)</th>
-<th class="tableblock halign-left valign-top">\(m_2\)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(a_1\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(a_2\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(a_3\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Calculez :</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>la matrice Y des données centrées,</p>
+<p><a href="http://www.lpsm.paris/pageperso/guyader/polysM.html">Régression Linéaire</a>, cours de Guyader, dont ce cours s’inspire</p>
 </li>
 <li>
-<p>la matrice des variances-covariances,</p>
+<p><a href="https://link.springer.com/book/10.1007/978-2-8178-0184-1">Régression avec R</a>, dont le cours de Guyader s’inspire</p>
 </li>
 <li>
-<p>la matrice de corrélations.</p>
+<p><a href="https://www.lamsade.dauphine.fr/~atif/doku.php?id=teaching:l3">Page</a> de Jamal Atif, où on trouve les diapos de cours</p>
 </li>
-</ol>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-20 16:29:22 +0200
+Last updated 2019-09-26 14:10:49 +0200
 </div>
 </div>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  messageStyle: "none",
-  tex2jax: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
-    ignoreClass: "nostem|nolatexmath"
-  },
-  asciimath2jax: {
-    delimiters: [["\\$", "\\$"]],
-    ignoreClass: "nostem|noasciimath"
-  },
-  TeX: { equationNumbers: { autoNumber: "none" } }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>

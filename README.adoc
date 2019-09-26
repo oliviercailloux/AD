@@ -4,6 +4,7 @@ Ce cours d’analyse de données utilise des supports créés par Jamal Atif. No
 == TDs
 * https://oliviercailloux.github.io/AD/TD1.html[TD1]
 * https://www.lamsade.dauphine.fr/~atif/lib/exe/fetch.php?media=teaching:ad-td2.pdf[TD2]
+* https://oliviercailloux.github.io/AD/TD3.html[TD3]
 
 == Références
 * http://www.lpsm.paris/pageperso/guyader/polysM.html[Régression Linéaire], cours de Guyader, dont ce cours s’inspire

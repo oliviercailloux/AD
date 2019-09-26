@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<title>TD1</title>
+<title>TD3</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -432,156 +432,128 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>TD1</h1>
+<h1>TD3</h1>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_exercice_1">Exercice 1</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>Soit le tableau de données suivant.</p>
+<div class="stemblock">
+<div class="content">
+\[\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}\]
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Données Ex 1</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">\(x^1\)</th>
-<th class="tableblock halign-left valign-top">\(x^2\)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">−2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Représentez graphiquement le nuage de points correspondant.</p>
-</li>
-<li>
-<p>Calculez la moyenne, la variance et l&#8217;écart-type de \(x^1\) et \(x^2\).</p>
-</li>
-<li>
-<p>Calculez la covariance et la corrélation linéaire entre \(x^1\) et \(x^2\). Commentez.</p>
-</li>
-<li>
-<p>Si on ajoute un 7ème individu \$((x^1, x^2), (10, 10))\$, que peut-on dire du coefficient de corrélation linéaire? Refaire les calculs dans 2 et 3.</p>
-</li>
-</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exercice_2">Exercice 2</h2>
+<h2 id="_exercice_1_erreur_de_prévision">Exercice 1 : Erreur de prévision</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Soient \(z^1\) et \(z^2\) deux variables obtenues par centrage et réduction de \(x^1\) et \(x^2\). Donnez l&#8217;expression de \(ρ_{z^1 z^2}\) en fonction de \(ρ_{x^1 x^2}\).</p>
+<p>Montrez que l&#8217;erreur de prévision \(\hat{\varepsilon}_{n+1}=(y_{n+1}-\hat{y}_{n+1})\) satisfait les propriétés suivantes :</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\left\{
+\begin{array}{ll}
+\E(\hat{\varepsilon}_{n+1}) &amp;= 0\\
+\var(\hat{\varepsilon}_{n+1})&amp;=\sigma^2\left(1+\frac1n+\frac{(x_{n+1}-\overline{\x})^2}{\sum_{i=1}^n (x_i-\overline{\x})^2}\right)
+\end{array}
+\right.\]
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exercice_3">Exercice 3</h2>
+<h2 id="_exercice_2_décomposition_de_la_variance_et_coefficient_de_détermination">Exercice 2 : Décomposition de la variance et coefficient de détermination</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Soit \(Z = [z_{ij}]\) la matrice de données centrées réduites : \(z_{ij}\) = \(\frac{x_{ij} - \overline{x}^j}{ \sigma_{x^j}}\).
-Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des données brutes :</p>
+<p>D&#8217;après le cours, nous avons :</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{align}
+||\y-\overline{\y}𝟙||^2&amp;=||\hat{\y}-\overline{\y}𝟙||^2 + ||\hat{\varepsilon}||^2\\
+\sum_{i=1}^n (y_i-\overline{\y})^2&amp; = \sum_{i=1}^n (\hat{y}_i-\overline{\y})^2 + \sum_{i=1}^n \hat{\varepsilon}_i^2,\\
+\text{SCT} &amp;= \text{SCE} + \text{SCR}
+\end{align}\]
+</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>obtenez une matrice \(Y\) égale à \(X\) centrée, par multiplication matricielle ;</p>
+<p>SCT : Somme des Carrés des écarts Totale</p>
 </li>
 <li>
-<p>obtenez la matrice \(V\) de variance-covariance de \(X\) ;</p>
+<p>SCE : Somme des Carrés des écarts Expliquée</p>
 </li>
 <li>
-<p>en utilisant les valeurs \(\sigma_{x^j}\), obtenez \(Z\) par multiplication matricielle de \(Y\).</p>
+<p>SCR : Somme des Carrés des écarts Résiduelle</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Astuce : commencez par considérer une matrice \(X\) d’une seule colonne.</p>
+<p>On définit également le coefficient de détermination \(R^2 =\frac{\text{SCE}}{\text{SCT}}\).</p>
+</div>
+<div class="paragraph">
+<p>Montrez que :</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[R^2 = 1 - \frac{\text{SCR}}{\text{SCT}} = \rho_{\x\y}^2\]
+</div>
+</div>
+<div class="paragraph">
+<p>Expliquer en vous appuyant sur une représentation géométrique (cf. cours) ce qui se passe quand :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(R^2 = 1\)</p>
+</li>
+<li>
+<p>\(R^2 = 0\)</p>
+</li>
+<li>
+<p>\(R^2\) est proche de zéro</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exercice_4">Exercice 4</h2>
+<h2 id="_exercice_3_pratique_de_la_régression">Exercice 3 : Pratique de la régression</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>On s&#8217;intéresse aux prix de 3 articles \(a_1\), \(a_2\), \(a_3\) (exemple : lait, pain, fromage) dans deux magasins \(m_1\) et \(m_2\). On dispose du tableau suivant.</p>
+<p>On appelle « fréquence seuil » d’un sportif amateur sa fréquence cardiaque obtenue après trois quarts d’heure d’un effort soutenu de course à pied. Celle-ci est mesurée à l’aide d’un cardio-fréquence-mètre. On cherche à savoir si l’âge d’un sportif a une influence sur sa fréquence seuil. On dispose pour cela de 20 valeurs du couple \((x_i,y_i)\), où \(x_i\) est l’âge et \(y_i\) la fréquence seuil du sportif. On a obtenu \((\mx,\my) = (35.6; 170.2)\) et :</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Données Ex 4</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">\(m_1\)</th>
-<th class="tableblock halign-left valign-top">\(m_2\)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(a_1\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(a_2\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(a_3\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Calculez :</p>
+<div class="stemblock">
+<div class="content">
+\[\sum_{i=1}^{n} (x_i-\mx)^2=1991,\,\,\, \sum_{i=1}^{n} (y_i-\my)^2=189.2,\,\,\, \sum_{i=1}^{n} (x_i-\mx)(y_i-\my)=-195.4\]
+</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>la matrice Y des données centrées,</p>
+<p>Calculer la droite des moindres carrés pour le modèle \(y_i = \beta_1 + \beta_2 x_i + \varepsilon_i\).</p>
 </li>
 <li>
-<p>la matrice des variances-covariances,</p>
+<p>Avec ces estimateurs, la somme des carrés des résidus vaut \(\sum_{i=1}^n(y_i-\hat{y}_i)^2=170\). Si on suppose les perturbations \(\varepsilon_i\) de même variance \(\sigma^2\) et d&#8217;espérance nulle, en déduire un estimateur non biaisé \(\hat{\sigma}^2\) de \(\sigma^2\).</p>
 </li>
 <li>
-<p>la matrice de corrélations.</p>
+<p>Calculer un estimateur  de la variance de \(\hat{\beta}_2\).</p>
+</li>
+<li>
+<p>Déduire des valeurs de SCR et SCT le coefficient de détermination. Commenter la qualité de l’ajustement des données au modèle.</p>
 </li>
 </ol>
 </div>
@@ -590,7 +562,7 @@ Donnez une expression de la matrice \(Z\) en termes de la matrice \(X\) des donn
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-09-20 16:29:22 +0200
+Last updated 2019-09-25 20:04:05 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
