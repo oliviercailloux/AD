@@ -1,0 +1,77 @@
+= TD3
+:stem: latexmath
+
+[latexmath] 
+++++ 
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}
+++++
+
+== Exercice 1 : Erreur de prévision
+Montrez que l'erreur de prévision \(\hat{\varepsilon}_{n+1}=(y_{n+1}-\hat{y}_{n+1})\) satisfait les propriétés suivantes : 
+
+[latexmath] 
+++++ 
+\left\{
+\begin{array}{ll}
+\E(\hat{\varepsilon}_{n+1}) &= 0\\
+\var(\hat{\varepsilon}_{n+1})&=\sigma^2\left(1+\frac1n+\frac{(x_{n+1}-\overline{\x})^2}{\sum_{i=1}^n (x_i-\overline{\x})^2}\right)
+\end{array}
+\right.
+++++
+
+== Exercice 2 : Décomposition de la variance et coefficient de détermination
+D'après le cours, nous avons : 
+
+[latexmath] 
+++++ 
+\begin{align}
+||\y-\overline{\y}𝟙||^2&=||\hat{\y}-\overline{\y}𝟙||^2 + ||\hat{\varepsilon}||^2\\
+\sum_{i=1}^n (y_i-\overline{\y})^2& = \sum_{i=1}^n (\hat{y}_i-\overline{\y})^2 + \sum_{i=1}^n \hat{\varepsilon}_i^2,\\
+\text{SCT} &= \text{SCE} + \text{SCR}
+\end{align}
+++++
+
+* SCT : Somme des Carrés des écarts Totale
+* SCE : Somme des Carrés des écarts Expliquée
+* SCR : Somme des Carrés des écarts Résiduelle
+
+On définit également le coefficient de détermination \(R^2 =\frac{\text{SCE}}{\text{SCT}}\).
+
+Montrez que : 
+[latexmath]
+++++
+R^2 = 1 - \frac{\text{SCR}}{\text{SCT}} = \rho_{\x\y}^2
+++++
+
+// = \frac{||\hat{\y}-\overline{\y}𝟙||^2}{||\y-\overline{\y}𝟙||^2} = 1 - \frac{||\hat{\varepsilon}||^2}{||\y-\overline{\y}𝟙||^2}
+
+Expliquer en vous appuyant sur une représentation géométrique (cf. cours) ce qui se passe quand :
+ 
+* \(R^2 = 1\)
+* \(R^2 = 0\)
+* \(R^2\) est proche de zéro
+
+== Exercice 3 : Pratique de la régression
+On appelle « fréquence seuil » d’un sportif amateur sa fréquence cardiaque obtenue après trois quarts d’heure d’un effort soutenu de course à pied. Celle-ci est mesurée à l’aide d’un cardio-fréquence-mètre. On cherche à savoir si l’âge d’un sportif a une influence sur sa fréquence seuil. On dispose pour cela de 20 valeurs du couple \((x_i,y_i)\), où \(x_i\) est l’âge et \(y_i\) la fréquence seuil du sportif. On a obtenu \((\mx,\my) = (35.6; 170.2)\) et :
+
+[latexmath]
+++++
+\sum_{i=1}^{n} (x_i-\mx)^2=1991,\,\,\, \sum_{i=1}^{n} (y_i-\my)^2=189.2,\,\,\, \sum_{i=1}^{n} (x_i-\mx)(y_i-\my)=-195.4
+++++
+
+. Calculer la droite des moindres carrés pour le modèle \(y_i = \beta_1 + \beta_2 x_i + \varepsilon_i\). 
+. Avec ces estimateurs, la somme des carrés des résidus vaut stem:[\sum_{i=1}^n(y_i-\hat{y}_i)^2=170]. Si on suppose les perturbations \(\varepsilon_i\) de même variance \(\sigma^2\) et d'espérance nulle, en déduire un estimateur non biaisé \(\hat{\sigma}^2\) de \(\sigma^2\). 
+. Calculer un estimateur  de la variance de \(\hat{\beta}_2\). 
+. Déduire des valeurs de SCR et SCT le coefficient de détermination. Commenter la qualité de l’ajustement des données au modèle.
+
