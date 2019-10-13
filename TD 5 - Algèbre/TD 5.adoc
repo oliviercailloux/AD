@@ -57,9 +57,9 @@ Rappel : l'espace propre associé à une valeur propre \(\lambda\) de A est \(E_
 
 == 6. Diagonalisation again
 Déterminez si \(A=\left[\begin{array}{rrr}2 & 4&3 \\-4 & -6&-3\\3&3&1\end{array}\right]\) est diagonalisable, sachant que
-\[
+\(
 p_A(\lambda)=-(\lambda-1)(\lambda+2)^2.
-\]
+\)
 
 //== 7.
 //Soit $A=\left[\begin{array}{rrr}5 & -8&1 \\0 & 0&7\\0&0&-2\end{array}\right]$. Est-elle diagonalisable ?
