@@ -39,7 +39,7 @@ Soit \(\u_1=\left[\begin{array}{l}5\\-2\\1\end{array}\right]\), \(\u_2=\left[\be
 
 * Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{4 u_1, 2 u_2, 3 y\}\) (NB : aucun calcul n’est nécessaire)
 * Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{u_1, u_2\}\)
-* Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{u_1, u_2\}\) pour le produit scalaire associé é la métrique \(M=\left[\begin{array}{rrr}1 & 0&0 \\0 & 2&0\\0&0&1\end{array}\right]\).
+* Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{u_1, u_2\}\) pour le produit scalaire associé à la métrique \(M=\left[\begin{array}{rrr}1 & 0&0 \\0 & 2&0\\0&0&1\end{array}\right]\).
 
 == 4. Diagonalisation
 Diagonalisez, si possible, la matrice \(A\) suivante :
