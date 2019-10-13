@@ -37,7 +37,7 @@ d(\y, V)=\min_{\x\in V} d(\x, \y).
 
 Soit \(\u_1=\left[\begin{array}{l}5\\-2\\1\end{array}\right]\), \(\u_2=\left[\begin{array}{l}1\\2\\-1\end{array}\right]\) et \(\y=\left[\begin{array}{l}-1\\-5\\10\end{array}\right]\).
 
-* Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{4 u_1, 2 u_2, 3 y\}\) (NB : aucun calcul n’est nécessaire)
+* Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{4 u_1, 2 u_2, 3 y + u_1\}\) (NB : aucun calcul n’est nécessaire)
 * Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{u_1, u_2\}\)
 * Calculez la distance de \(y\) à \(V\) si \(V\) est engendré par \(\{u_1, u_2\}\) pour le produit scalaire associé à la métrique \(M=\left[\begin{array}{rrr}1 & 0&0 \\0 & 2&0\\0&0&1\end{array}\right]\).
 
