@@ -2,10 +2,11 @@
 Ce cours d’analyse de données utilise des supports créés par Jamal Atif. Nous avons légèrement modifié certains TDs. Il est publié ici sous licence libre avec la permission des auteurs. Prière de citer Jamal Atif, Université Paris-Dauphine et de renvoyer par lien ici si vous réutilisez ces supports.
 
 == TDs
-* https://oliviercailloux.github.io/AD/TD1.html[TD1]
-* https://www.lamsade.dauphine.fr/~atif/lib/exe/fetch.php?media=teaching:ad-td2.pdf[TD2] (https://oliviercailloux.github.io/AD/TD%202%2C%20Partie%202%2C%20Exercice%202.html[correction] de la partie 2 exercice 2)
-* https://oliviercailloux.github.io/AD/TD3.html[TD3] (https://oliviercailloux.github.io/AD/TD%203%2C%20Exercice%203.html[correction] de l’exercice 3)
-* https://oliviercailloux.github.io/AD/TD4.html[TD4]
+* https://oliviercailloux.github.io/AD/TD%201/TD%201.html[TD 1]
+* https://www.lamsade.dauphine.fr/~atif/lib/exe/fetch.php?media=teaching:ad-td2.pdf[TD 2] (https://oliviercailloux.github.io/AD/TD%202/Partie%202%2C%20Exercice%202.html[correction] de la partie 2 exercice 2)
+* https://oliviercailloux.github.io/AD/TD%203/TD%203.html[TD 3] (https://oliviercailloux.github.io/AD/TD%203/Exercice%203.html[correction] de l’exercice 3)
+* https://oliviercailloux.github.io/AD/TD%204%20-%20-Estimateurs/TD%204.html[TD 4] (voir aussi https://github.com/oliviercailloux/AD/raw/master/TD%204%20-%20-Estimateurs/Dice.ods[Dice.ods])
+* https://oliviercailloux.github.io/AD/TD%205/TD%205.html[TD 5]
 
 == Références
 * http://www.lpsm.paris/pageperso/guyader/polysM.html[Régression Linéaire], cours de Guyader, dont ce cours s’inspire

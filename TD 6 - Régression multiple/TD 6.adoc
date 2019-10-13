@@ -1,0 +1,39 @@
+= TD5
+:stem: latexmath
+
+[latexmath] 
+++++ 
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}
+++++
+
+== Régression multiple
+Soit \(X\) la matrice de données suivante :
+
+[latexmath] 
+++++ 
+X = \begin{pmatrix}
+1 & 2\\
+2 & 4\\
+3 & 1\\
+1 & 3\\
+2 & 1\\
+\end{pmatrix},
+++++
+
+\(\mathbf{y}^T = (1,2,1,3,1)\), et \(\mathbf{\beta}^T = (\beta_1,\beta_2)\).
+
+Considérons le modèle de régression multiple où \(y_i = f(\mathbf{x}_i) + \epsilon_i = \beta_0 + \mathbf{\beta}\mathbf{x}_i + \epsilon_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \epsilon_i\). 
+Déterminer le vecteur des estimateurs \(\mathbf{\hat{\beta}}^T = (\hat{\beta}_1,\hat{\beta}_2)\) via le modèle de régression multiple. 
+Dessiner le plan obtenu.
+
