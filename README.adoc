@@ -7,6 +7,8 @@ Ce cours d’analyse de données utilise des supports créés par Jamal Atif. No
 * https://oliviercailloux.github.io/AD/TD%203/TD%203.html[TD 3] (https://oliviercailloux.github.io/AD/TD%203/Exercice%203.html[correction] de l’exercice 3)
 * https://oliviercailloux.github.io/AD/TD%204%20-%20Estimateurs/TD%204.html[TD 4] (voir aussi https://github.com/oliviercailloux/AD/raw/master/TD%204%20-%20Estimateurs/Dice.ods[Dice.ods])
 * https://oliviercailloux.github.io/AD/TD%205%20-%20Algèbre/TD%205.html[TD 5]
+* https://oliviercailloux.github.io/AD/TD%206%20-%20Régression%20multiple/TD%206.html[TD 6]
+* https://oliviercailloux.github.io/AD/TD%207%20-%20ACP/TD%207.pdf[TD 7]
 
 == Références
 * https://www.lamsade.dauphine.fr/~atif/doku.php?id=teaching:l3[Page] du cours de Jamal Atif, d’où ce cours est tiré
