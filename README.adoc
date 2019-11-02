@@ -9,6 +9,7 @@ Ce cours d’analyse de données utilise des supports créés par Jamal Atif. No
 * https://oliviercailloux.github.io/AD/TD%205%20-%20Algèbre/TD%205.html[TD 5]
 * https://oliviercailloux.github.io/AD/TD%206%20-%20Régression%20multiple/TD%206.html[TD 6]
 * https://github.com/oliviercailloux/AD/raw/master/TD%207%20-%20ACP/TD%207.pdf[TD 7]
+** https://www.wired.com/2017/05/physics-of-a-fidget-spinner/[Inertie] expliquée (voir la vidéo)
 
 == Références
 * https://www.lamsade.dauphine.fr/~atif/doku.php?id=teaching:l3[Page] du cours de Jamal Atif, d’où ce cours est tiré
