@@ -1,0 +1,60 @@
+= TD7 - ACP, intro
+:stem: latexmath
+
+[latexmath] 
+++++ 
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}
+++++
+
+== ACP après réduction
+Considérons le tableau de données suivant :
+
+[latexmath]
+++++
+\begin{array}{c|ccc}
+&\text{Math}&\text{Info}&\text{Gestion}\\
+\hline
+\text{Noam}&0 & 4 & 0    \\
+\text{Jean}&1 & 3 & 1  \\           
+\text{Li}&2 & 2 & 3  \\ 
+\text{Lisa}&3 & 1 & 1 \\ 
+\text{Mina}&4 & 0 & 0
+\end{array}
+++++
+
+où les lignes représentent les individus (noms de quelques étudiants) et les colonnes les variables (notes en mathématiques, informatique et gestion).
+
+Ce tableau de données peut être représenté par la matrice \(X\) de données brutes :
+\[ 
+ X=\left( \begin{array}{ccc}
+ 0 & 4 & 0    \\
+ 1 & 3 & 1  \\           
+ 2 & 2 & 3  \\ 
+ 3 & 1 & 1 \\ 
+ 4 & 0 & 0
+ \end{array} \right)\]
+
+* Calculer la matrice \(Y\) des données centrées et la matrice \(Z\) de données centrées et réduites.  
+* Calculer la matrice \(R_X\) des corrélations de \(X\) et la matrice \(V_Z\) des variances et covariances de \(Z\). 
+Commentez. 
+* Vérifier que les vecteurs unitaires 
+\begin{eqnarray*}
+\mathbf{u}_1^t &=&\frac{1}{\sqrt{2}}[-1,1,0]\\
+\mathbf{u}_2^t &=&[0,0,1]
+\end{eqnarray*}
+ sont les vecteurs propres de \(R_X\) (ou, équiv., de \(V_Z\)) associés à des valeurs propres non nulles.
+ Trouvez-les.  
+
+* Peut-on représenter parfaitement le nuage des individus à 2 dimensions ? Représentez les individus de \(Z\) sur le plan défini par la base \(S=\{\mathbf{u}_1,\mathbf{u}_2\}\) (Indication : calculer la projection de chacun des points - par rapport au produit scalaire usuel -  dans le plan engendré par les deux vecteurs propres). 
+

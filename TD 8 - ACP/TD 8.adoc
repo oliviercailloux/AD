@@ -1,0 +1,42 @@
+= TD8 - ACP
+:stem: latexmath
+
+[latexmath] 
+++++ 
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}
+++++
+
+== Calcul de l’inertie
+Démontrer l'égalité suivante (avec \(g\) le centre de gravité et l'opérateur \(\tilde{x}\) correspondant à la projection orthogonale de \(x\) sur un espace vectoriel) :
+\[
+\begin{array}{ccl}
+D_V & = & \displaystyle{\sum_{i \not= j}} p_ip_j(d^2(x_i,x_j) - d^2(\tilde{x}_i,\tilde{x}_j))\\
+ & = & 2 \displaystyle{\sum_i} p_i(d^2(x_i,g) - d^2(\tilde{x}_i,\tilde{g}))
+\end{array}
+\]
+
+== ACP
+On considère la matrice de données suivante :
+
+\[A=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 0 & 1\\0 & 1 & 2 \\ 2 & 2 & 1\\ 1 &0 & 0\\ 2 & 3 & 2\end{array}\right)\]
+
+* Calculer \(g\) (le centre de gravité), \(Y\) (la matrice des données centrées) et \(V\) (la matrice de covariances).
+* Vérifier que \(\left(\begin{array}{c} 1\\-1\\1 \end{array}\right)\) et \(\left(\begin{array}{c} 1\\0\\-1 \end{array}\right)\) sont vecteurs propres de \(V\), en indiquant  les valeurs propres associées. En déduire le troisième vecteur propre de \(V\) et la valeur propre correspondante.
+* À partir des résultats précédents, déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus associé au tableau \(X\). Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l’axe considéré, et la part d’inertie qu’il explique.
+* Calculer les composantes principales pour chaque individu.
+ * Représenter graphiquement le nuage \(N(I)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
+* Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+* Représenter graphiquement le nuage des variables \(N(V)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
+* Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+
