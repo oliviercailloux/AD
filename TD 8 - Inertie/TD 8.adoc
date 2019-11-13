@@ -1,0 +1,28 @@
+= TD8 - Inertie
+:stem: latexmath
+
+[latexmath] 
+++++ 
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}
+++++
+
+== Calcul de l’inertie
+Démontrer l'égalité suivante (avec \(g\) le centre de gravité et l'opérateur \(\tilde{x}\) correspondant à la projection orthogonale de \(x\) sur un espace vectoriel) :
+\[
+\begin{array}{ccl}
+D_V & = & \displaystyle{\sum_{i \not= j}} p_ip_j(d^2(x_i,x_j) - d^2(\tilde{x}_i,\tilde{x}_j))\\
+ & = & 2 \displaystyle{\sum_i} p_i(d^2(x_i,g) - d^2(\tilde{x}_i,\tilde{g}))
+\end{array}
+\]
+

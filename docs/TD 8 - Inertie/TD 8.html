@@ -5,8 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<meta name="author" content="Ce cours d’analyse de données utilise des supports créés par Jamal Atif. Nous avons légèrement modifié certains TDs. Il est publié ici sous licence libre avec la permission des auteurs. Prière de citer Jamal Atif, Université Paris-Dauphine et de renvoyer par lien ici si vous réutilisez ces supports.">
-<title>Analyse de données</title>
+<title>TD8 - Inertie</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -433,78 +432,64 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Analyse de données</h1>
-<div class="details">
-<span id="author" class="author">Ce cours d’analyse de données utilise des supports créés par Jamal Atif. Nous avons légèrement modifié certains TDs. Il est publié ici sous licence libre avec la permission des auteurs. Prière de citer Jamal Atif, Université Paris-Dauphine et de renvoyer par lien ici si vous réutilisez ces supports.</span><br>
-</div>
+<h1>TD8 - Inertie</h1>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_tds">TDs</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%201/TD%201.html">TD 1</a></p>
-</li>
-<li>
-<p><a href="https://www.lamsade.dauphine.fr/~atif/lib/exe/fetch.php?media=teaching:ad-td2.pdf">TD 2</a> (<a href="https://oliviercailloux.github.io/AD/TD%202/Partie%202%2C%20Exercice%202.html">correction</a> de la partie 2 exercice 2)</p>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%203/TD%203.html">TD 3</a> (<a href="https://oliviercailloux.github.io/AD/TD%203/Exercice%203.html">correction</a> de l’exercice 3)</p>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%204%20-%20Estimateurs/TD%204.html">TD 4 - Estimateurs</a> (voir aussi <a href="https://github.com/oliviercailloux/AD/raw/master/TD%204%20-%20Estimateurs/Dice.ods">Dice.ods</a>)</p>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%205%20-%20Algèbre/TD%205.html">TD 5 - Algèbre</a></p>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%206%20-%20Régression%20multiple/TD%206.html">TD 6</a></p>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%207%20-%20ACP,%20intro/TD%207.html">TD 7 - ACP, intro</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.wired.com/2017/05/physics-of-a-fidget-spinner/">Inertie</a> expliquée (voir la vidéo)</p>
-</li>
-</ul>
+<div class="stemblock">
+<div class="content">
+\[\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\E}{\operatorname{\mathbb{E}}}
+\newcommand{\cor}{\operatorname{cor}}
+\newcommand{\Prob}{\mathbb{P}}
+\def\hbO{\hat{\beta_1}}
+\def\hbT{\hat{\beta_2}}
+\def\mx{\overline{\x}}
+\def\my{\overline{\y}}
+\def\u{\mathbf{u}}\]
 </div>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%208%20-%20Inertie/TD%208.html">TD 8 - Inertie</a></p>
-</li>
-<li>
-<p><a href="https://oliviercailloux.github.io/AD/TD%209%20-%20ACP/TD%209.html">TD 9 - ACP</a></p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_références">Références</h2>
+<h2 id="_calcul_de_linertie">Calcul de l’inertie</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.lamsade.dauphine.fr/~atif/doku.php?id=teaching:l3">Page</a> du cours de Jamal Atif, d’où ce cours est tiré</p>
-</li>
-<li>
-<p><a href="http://www.lpsm.paris/pageperso/guyader/polysM.html">Régression Linéaire</a>, cours de Guyader, dont une partie du cours de Jamal s’inspire</p>
-</li>
-<li>
-<p><a href="https://link.springer.com/book/10.1007/978-2-8178-0184-1">Régression avec R</a>, dont le cours de Guyader s’inspire</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Démontrer l&#8217;égalité suivante (avec \(g\) le centre de gravité et l&#8217;opérateur \(\tilde{x}\) correspondant à la projection orthogonale de \(x\) sur un espace vectoriel) :
+\[
+\begin{array}{ccl}
+D_V &amp; = &amp; \displaystyle{\sum_{i \not= j}} p_ip_j(d^2(x_i,x_j) - d^2(\tilde{x}_i,\tilde{x}_j))\\
+ &amp; = &amp; 2 \displaystyle{\sum_i} p_i(d^2(x_i,g) - d^2(\tilde{x}_i,\tilde{g}))
+\end{array}
+\]</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-13 14:53:45 +0100
+Last updated 2019-11-13 14:54:27 +0100
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
