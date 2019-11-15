@@ -553,7 +553,7 @@ str
 <pre class="prettyprint highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; a = 3
 &gt;&gt;&gt; a + 4
 7
-# À ne pas faire : change le type !
+# À ne pas faire dans un programme : change le type
 &gt;&gt;&gt; a = 'Hello'
 &gt;&gt;&gt; type(a)
 str</code></pre>
@@ -609,14 +609,14 @@ True
 <pre class="prettyprint highlight"><code class="language-python" data-lang="python"># Tuple d’entiers
 &gt;&gt;&gt; (2, 5, -1)
 (2, 5, -1)
-# Liste de chaines
+# Tuple de chaines
 &gt;&gt;&gt; l = ('a', 'Hello', 'world')
 &gt;&gt;&gt; type(l)
 tuple
 # Noter les double parenthèses
 &gt;&gt;&gt; type((3.0, 1.2))
 tuple
-# tuple est une séquence : on peut appliquer les opérations déjà vues
+# tuple est une séquence : on peut lui appliquer les opérations déjà vues
 &gt;&gt;&gt; len((2, 3))
 2
 &gt;&gt;&gt; 4 in (2, 3)
@@ -644,8 +644,8 @@ False
 <div class="listingblock">
 <div class="content">
 <pre class="prettyprint highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; def say_hello():
-&gt;&gt;&gt;    hello = 'Hello, world'
-&gt;&gt;&gt;    print(hello)
+&gt;&gt;&gt;     hello = 'Hello, world'
+&gt;&gt;&gt;     print(hello)
 &gt;&gt;&gt;
 &gt;&gt;&gt; say_hello()
 Hello, world
@@ -682,7 +682,7 @@ True</code></pre>
 <div class="sect2">
 <h3 id="_complétion">Complétion</h3>
 <div class="paragraph">
-<p>Après avoir tapé un nom de variable contenant un objet, et un point (et éventuellement un début de texte), appuyez sur &lt;TAB&gt; : votre interpréteur vous fournit une liste de complétions possibles, à savoir, les méthodes et attributs que vous pouvez invoquer ici.</p>
+<p>Après avoir tapé un nom de variable désignant un objet, et un point (et éventuellement un début de texte), appuyez sur &lt;TAB&gt; : votre interpréteur vous fournit une liste de complétions possibles, à savoir, les méthodes et attributs que vous pouvez invoquer ici.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -835,7 +835,7 @@ array([[ 2,  5,  1],
 17
 &gt;&gt;&gt; np.ones([2, 3]) @ m
 # ?
-# Certaines opérations s’appliquent sur un axe (colonne, axe 0 ; ligne, axe 1)
+# Certaines opérations itèrent sur un axe (axe 0, sur chaque ligne ; axe 1, sur chaque colonne)
 # Somme itérant sur chaque ligne
 &gt;&gt;&gt; m.sum(axis=0)
 array([8, 4])
@@ -851,7 +851,7 @@ array([ 2, -1,  1])</code></pre>
 <div class="sect2">
 <h3 id="_statistique">Statistique</h3>
 <div class="paragraph">
-<p>La fonction <code>cov</code> calcule la matrice de variance-covariance, étant donnée une matrice où les variables sont en <em>ligne</em>. Préciser que <code>ddof</code> (le nombre de degrés de liberté) vaut zéro pour la covariance descriptive, sinon il divise par le nombre d’observations moins un (ce qui fournit une estimation non biaisée de la covariance). La méthode <code>var</code> calcule la variance le long d’un axe. La fonction <code>corrcoef</code> calcule les coefficients de corrélation entre toutes les paires de variables.</p>
+<p>La fonction <code>cov</code> calcule la matrice de variance-covariance, étant donnée une matrice où les variables sont en <em>lignes</em>. Préciser que <code>ddof</code> (le nombre de degrés de liberté) vaut zéro pour la covariance descriptive, sinon il divise par le nombre d’observations moins un (ce qui fournit une estimation non biaisée de la covariance). La méthode <code>var</code> calcule la variance le long d’un axe. La fonction <code>corrcoef</code> calcule les coefficients de corrélation entre toutes les paires de variables.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -875,7 +875,7 @@ array([[ 1.  , -0.5 ,  0.28],
 <div class="sect2">
 <h3 id="_moindres_carrés">Moindres carrés</h3>
 <div class="paragraph">
-<p>Le module SciPy contient un sous-module <em>linalg</em>, qui permet d’autres manipulations sur les structures de NumPy.</p>
+<p>La bibliothèque SciPy contient un sous-module <em>linalg</em>, qui permet d’autres manipulations sur les structures de NumPy.</p>
 </div>
 <div class="paragraph">
 <p>La méthode <code>lstsq</code> calcule la droite des moindres carrés. Elle renvoie plusieurs valeurs, dont la première nous intéresse particulièrement : un vecteur contenant les valeurs de \(\beta_1, \beta_2\) (dans le cas d’une régression simple).</p>
@@ -926,7 +926,7 @@ array([[ 0.09, -0.31,  0.34],
 array([[ 1.,  0.,  0.],
        [-0.,  1., -0.],
        [-0., -0.,  1.]])
-# eig renvoie une paire, dont le premier élément est le vecteur des valeurs propres, et dont le deuxième élément est le vecteur de vecteurs propres unitaires (dans l’ordre correspondant à l’ordre des valeurs propres)
+# eig renvoie une paire de vecteurs, le premier élément contenant les valeurs propres, le deuxième contenant les vecteurs propres unitaires (dans l’ordre correspondant à l’ordre des valeurs propres)
 &gt;&gt;&gt; linalg.eig(m)[0]
 array([-4.+0.j,  4.+0.j,  8.+0.j])
 &gt;&gt;&gt; e_vects = linalg.eig(m)[1]
@@ -990,7 +990,7 @@ array([-2.83,  0.  ,  2.83])</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-15 18:18:57 +0100
+Last updated 2019-11-15 18:45:28 +0100
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">

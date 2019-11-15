@@ -110,14 +110,14 @@ Les types `tuple` et `list` sont également des séquences. On peut y mettre des
 # Tuple d’entiers
 >>> (2, 5, -1)
 (2, 5, -1)
-# Liste de chaines
+# Tuple de chaines
 >>> l = ('a', 'Hello', 'world')
 >>> type(l)
 tuple
 # Noter les double parenthèses
 >>> type((3.0, 1.2))
 tuple
-# tuple est une séquence : on peut appliquer les opérations déjà vues
+# tuple est une séquence : on peut lui appliquer les opérations déjà vues
 >>> len((2, 3))
 2
 >>> 4 in (2, 3)
@@ -142,8 +142,8 @@ Fonctions : en-tête utilisant le mot clé `def`, et noms des paramètres entre 
 [source, python]
 ----
 >>> def say_hello():
->>>    hello = 'Hello, world'
->>>    print(hello)
+>>>     hello = 'Hello, world'
+>>>     print(hello)
 >>>
 >>> say_hello()
 Hello, world
@@ -175,7 +175,7 @@ True
 ----
 
 === Complétion
-Après avoir tapé un nom de variable contenant un objet, et un point (et éventuellement un début de texte), appuyez sur <TAB> : votre interpréteur vous fournit une liste de complétions possibles, à savoir, les méthodes et attributs que vous pouvez invoquer ici.
+Après avoir tapé un nom de variable désignant un objet, et un point (et éventuellement un début de texte), appuyez sur <TAB> : votre interpréteur vous fournit une liste de complétions possibles, à savoir, les méthodes et attributs que vous pouvez invoquer ici.
 
 [source, python]
 ----
@@ -303,7 +303,7 @@ array([[ 2,  5,  1],
 17
 >>> np.ones([2, 3]) @ m
 # ?
-# Certaines opérations s’appliquent sur un axe (colonne, axe 0 ; ligne, axe 1)
+# Certaines opérations itèrent sur un axe (axe 0, sur chaque ligne ; axe 1, sur chaque colonne)
 # Somme itérant sur chaque ligne
 >>> m.sum(axis=0)
 array([8, 4])
@@ -315,7 +315,7 @@ array([ 2, -1,  1])
 Exercice : calculez la déviation standard sur chaque colonne de la matrice d’entrées (par lignes) \((3, 2, 5), (1, 2, -1), (8, 9, 3), (1, 0, -3)\). Utiliser la méthode `std` et préciser l’axe d’application. Vous devriez obtenir \(2.86, 3.42, 3.16\). Calculez ensuite cette déviation standard sans utiliser la méthode `std`. N’utilisez pas de boucles explicites.
 
 === Statistique
-La fonction `cov` calcule la matrice de variance-covariance, étant donnée une matrice où les variables sont en _ligne_. Préciser que `ddof` (le nombre de degrés de liberté) vaut zéro pour la covariance descriptive, sinon il divise par le nombre d’observations moins un (ce qui fournit une estimation non biaisée de la covariance). La méthode `var` calcule la variance le long d’un axe. La fonction `corrcoef` calcule les coefficients de corrélation entre toutes les paires de variables.
+La fonction `cov` calcule la matrice de variance-covariance, étant donnée une matrice où les variables sont en _lignes_. Préciser que `ddof` (le nombre de degrés de liberté) vaut zéro pour la covariance descriptive, sinon il divise par le nombre d’observations moins un (ce qui fournit une estimation non biaisée de la covariance). La méthode `var` calcule la variance le long d’un axe. La fonction `corrcoef` calcule les coefficients de corrélation entre toutes les paires de variables.
 
 [source, python]
 ----
@@ -335,7 +335,7 @@ array([[ 1.  , -0.5 ,  0.28],
 Exercice : calculez le coefficient de corrélation de \(m\) sans utiliser la fonction `corrcoef`, en réduisant `m` puis en utilisant la fonction `cov`. N’utilisez pas de boucles explicites.
 
 === Moindres carrés
-Le module SciPy contient un sous-module _linalg_, qui permet d’autres manipulations sur les structures de NumPy.
+La bibliothèque SciPy contient un sous-module _linalg_, qui permet d’autres manipulations sur les structures de NumPy.
 
 La méthode `lstsq` calcule la droite des moindres carrés. Elle renvoie plusieurs valeurs, dont la première nous intéresse particulièrement : un vecteur contenant les valeurs de \(\beta_1, \beta_2\) (dans le cas d’une régression simple).
 
@@ -382,7 +382,7 @@ array([[ 0.09, -0.31,  0.34],
 array([[ 1.,  0.,  0.],
        [-0.,  1., -0.],
        [-0., -0.,  1.]])
-# eig renvoie une paire, dont le premier élément est le vecteur des valeurs propres, et dont le deuxième élément est le vecteur de vecteurs propres unitaires (dans l’ordre correspondant à l’ordre des valeurs propres)
+# eig renvoie une paire de vecteurs, le premier élément contenant les valeurs propres, le deuxième contenant les vecteurs propres unitaires (dans l’ordre correspondant à l’ordre des valeurs propres)
 >>> linalg.eig(m)[0]
 array([-4.+0.j,  4.+0.j,  8.+0.j])
 >>> e_vects = linalg.eig(m)[1]
