@@ -11,6 +11,7 @@ Ce cours d’analyse de données utilise des supports créés par Jamal Atif. No
 * https://oliviercailloux.github.io/AD/TD%207%20-%20ACP,%20intro/TD%207.html[TD 7 - ACP, intro]
 ** https://www.wired.com/2017/05/physics-of-a-fidget-spinner/[Inertie] expliquée (voir la vidéo)
 * https://oliviercailloux.github.io/AD/TD%208%20-%20Inertie/TD%208.html[TD 8 - Inertie]
+* https://oliviercailloux.github.io/AD/TP/TP.html[TP]
 * https://oliviercailloux.github.io/AD/TD%209%20-%20ACP/TD%209.html[TD 9 - ACP]
 
 == Références
