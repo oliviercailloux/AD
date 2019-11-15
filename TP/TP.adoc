@@ -17,7 +17,7 @@ Pour un environnement de développement, démarrez `pyzo`. (Pour une simple invi
 === Usage et syntaxe de base
 Entrez une expression, enter. L’interpréteur exécute l’expression; si elle renvoie une valeur, l’interpréteur affiche la valeur renvoyée.
 
-Une expression peut être un entier, une chaine, un réel…
+Les expressions les plus simples sont : un entier, une chaine, un réel…
 
 [source, python]
 ----
