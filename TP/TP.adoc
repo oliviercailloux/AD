@@ -1,6 +1,7 @@
 = Python
 :stem: latexmath
 :source-highlighter: prettify
+:toc:
 
 == Présentation de Python
 https://www.python.org/[Python] est un langage de programmation multi-paradigme, généralement considéré comme adéquat pour du prototypage rapide (et plus si affinités).
@@ -13,7 +14,7 @@ https://www.python.org/[Python] est un langage de programmation multi-paradigme,
 Pour un environnement de développement, démarrez `pyzo`. (Pour une simple invite de commande, démarrez `ipython3`.)
 
 == Python en général
-== Usage et syntaxe de base
+=== Usage et syntaxe de base
 Entrez une expression, enter. L’interpréteur exécute l’expression; si elle renvoie une valeur, l’interpréteur affiche la valeur renvoyée.
 
 Une expression peut être un entier, une chaine, un réel…
