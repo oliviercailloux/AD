@@ -10,6 +10,7 @@ asciidoctor -D "docs/TD 6 - Régression multiple" "TD 6 - Régression multiple/T
 asciidoctor -D "docs/TD 7 - ACP, intro" "TD 7 - ACP, intro/TD 7.adoc"
 asciidoctor -D "docs/TD 8 - Inertie" "TD 8 - Inertie/TD 8.adoc"
 asciidoctor -D "docs/TD 9 - ACP" "TD 9 - ACP/TD 9.adoc"
+asciidoctor -D "docs/TP" "TP/TP.adoc"
 mkdir "docs/TD 2"
 jupyter nbconvert "--output=../docs/TD 2/Partie 2, Exercice 2" "TD 2/Partie 2, Exercice 2.ipynb"
 jupyter nbconvert "--output=../docs/TD 3/Exercice 3" "TD 3/Exercice 3.ipynb"

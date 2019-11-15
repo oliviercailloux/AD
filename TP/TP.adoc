@@ -1,0 +1,429 @@
+= Python
+:stem: latexmath
+:source-highlighter: prettify
+
+== Présentation de Python
+https://www.python.org/[Python] est un langage de programmation multi-paradigme, généralement considéré comme adéquat pour du prototypage rapide (et plus si affinités).
+
+* créé en 1990 par https://en.wikipedia.org/wiki/Guido_van_Rossum[Guido van Rossum]
+* interprété
+* typage purement dynamique (pas de vérification statique des types)
+* version actuelle : 3.8. (Versions 3.x très similaires, versions 2.x à éviter)
+
+Pour un environnement de développement, démarrez `pyzo`. (Pour une simple invite de commande, démarrez `ipython3`.)
+
+== Python en général
+== Usage et syntaxe de base
+Entrez une expression, enter. L’interpréteur exécute l’expression; si elle renvoie une valeur, l’interpréteur affiche la valeur renvoyée.
+
+Une expression peut être un entier, une chaine, un réel…
+
+[source, python]
+----
+>>> 3
+3
+>>> type(3)
+int
+>>> 3.0
+3.0
+>>> type(3.0)
+float
+>>> 'Hello, world.'
+'Hello, world.'
+>>> type('Hello')
+str
+----
+
+=== Types et opérations
+Une valeur a un type.
+
+Certaines opérations peuvent être appliquées sur des valeurs, selon leurs types. 
+
+Certaines opérations distinctes ont le même symbole : `+` sur entiers et sur chaines, par exemple.
+
+[source, python]
+----
+>>> type(3)
+int
+>>> 3 + 2
+5
+>>> 3 ** 2
+9
+>>> type('Hello')
+str
+>>> 'Hello' + ', world' + '.'
+>>> '3' + '2'
+?
+----
+
+=== Variables
+Affectez une valeur à une variable : l’interpréteur retient cette variable pour toute la session.
+
+Une variable a une valeur et donc un type (affecté dynamiquement). *Conseil* : maintenez le type d’une variable constant dans un programme, pour une meilleure lisibilité.
+
+[source, python]
+----
+>>> a = 3
+>>> a + 4
+7
+# À ne pas faire : change le type !
+>>> a = 'Hello'
+>>> type(a)
+str
+----
+
+=== Booléens
+Le type `bool` n’a que deux valeurs, `True` et `False`. Opérateurs : `and`, `or`, …
+
+[source, python]
+----
+>>> type(True)
+bool
+>>> True and False
+False
+>>> a = True
+>>> b = False
+>>> (a or b) and (b or b)
+?
+----
+
+=== Séquences
+Le type `str` est une sorte de https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range[séquence] : une séquence de caractères. Sur toute séquence (donc y compris sur une chaine), on peut appliquer des opérations de longueur, d’appartenance, d’accès par index, de « tranchage » (_slicing_), de concaténation, …
+
+[source, python]
+----
+>>> len('Hello')
+5
+# Appartenance : l’élément est-il dans la séquence ?
+>>> 'e' in 'Hello'
+True
+# Accès par index à un élément de la séquence
+>>> 'Hello'[0]
+'H'
+# Tranche
+>>> 'Hello'[1:4]
+'ell'
+# Concaténation : nouvelle séquence comprenant tous les éléments fournis
+>>> 'Hello' + ', world'
+'Hello, world'
+----
+
+Les types `tuple` et `list` sont également des séquences. On peut y mettre des éléments de n’importe quel type. Les tuples sont immuables, les listes peuvent être modifiées.
+
+[source, python]
+----
+# Tuple d’entiers
+>>> (2, 5, -1)
+(2, 5, -1)
+# Liste de chaines
+>>> l = ('a', 'Hello', 'world')
+>>> type(l)
+tuple
+# Noter les double parenthèses
+>>> type((3.0, 1.2))
+tuple
+# tuple est une séquence : on peut appliquer les opérations déjà vues
+>>> len((2, 3))
+2
+>>> 4 in (2, 3)
+False
+>>> (2, 3)[1]
+3
+>>> (2, 5, -1, 0)[1:3]
+(5, -1)
+>>> (2, 3) + (-1, 0)
+(2, 3, -1, 0)
+# Listes : même chose mais avec des crochets
+>>> [2, 3, 0]
+[2, 3, 0]
+# Un tuple de listes
+>>> ([0, 4], [1], ['blah', 'bouh'])
+([0, 4], [1], ['blah', 'bouh'])
+----
+
+=== Fonctions, méthodes
+Fonctions : en-tête utilisant le mot clé `def`, et noms des paramètres entre parenthèses. Suivi par un _bloc_. Un bloc commence par `:` et est composé d’un ensemble d’expressions _indenté_. Indentation recommandée : quatre espaces. Pour renvoyer une valeur, utiliser `return`.
+
+[source, python]
+----
+>>> def say_hello():
+>>>    hello = 'Hello, world'
+>>>    print(hello)
+>>>
+>>> say_hello()
+Hello, world
+>>> def add_numbers(x, y):
+>>>     return x + y
+>>>
+>>> add_numbers(3, 2)
+5
+# Ne pas confondre : un tuple de nombres (un paramètre), un ensemble de nombres (plusieurs paramètres)
+>>> add_numbers((3, 2))
+TypeError: add_numbers() missing 1 required positional argument: 'y'
+>>> add_numbers((3, 2), (4, 4))
+?
+----
+
+Un objet offre également des _méthodes_ (c-à-d une fonction s’exécutant dans le contexte d’un objet donné). Une méthode `count` est définie sur les séquences. On appelle une méthode avec l’objet suivi d’un `.` puis le nom de méthode puis les paramètres entre parenthèses.
+
+Un type offre aussi des _attributs_. On les consulte en appelant l’objet suivi d’un `.` et le nom de l’attribut.
+
+[source, python]
+----
+>>> 'Hello'.count('l')
+2
+# Création d’une instance de memoryview représentant la mémoire occupée par l’objet passé en paramètre
+>>> m = memoryview(bytes('ploum', "utf-8"))
+# L’attribut readonly indique si la mémoire est en lecture seule
+>>> m.readonly
+True
+----
+
+=== Complétion
+Après avoir tapé un nom de variable contenant un objet, et un point (et éventuellement un début de texte), appuyez sur <TAB> : votre interpréteur vous fournit une liste de complétions possibles, à savoir, les méthodes et attributs que vous pouvez invoquer ici.
+
+[source, python]
+----
+>>> l = [0, 1]
+>>> l.<TAB>
+            l.append  l.count   l.insert  l.reverse 
+            l.clear   l.extend  l.pop     l.sort    
+            l.copy    l.index   l.remove
+>>> l.co<TAB>
+              l.copy
+              l.count
+----
+
+=== Exercice
+* Définissez une fonction `get_ordered_pair` qui accepte deux entiers en paramètres et renvoie une paire (un tuple de deux éléments) composée du plus petit élément suivi du plus grand.
+* Définissez une fonction `get_four_tuple` qui accepte quatre entiers en paramètres et renvoie un tuple de quatre entiers, les deux premiers ordonnés entre eux et les deux suivants ordonnés entre eux. Votre fonction `get_four_tuple` doit appeler deux fois votre fonction `get_ordered_pair`.
+* Par exemple, `get_four_tuple(4, 2, 7, 3)` doit renvoyer `(2, 4, 3, 7)`.
+* Votre programme définit quatre variables `a1` à `a4` avec des entiers (valeurs fixées dans votre code), affiche les valeurs des quatre variables, appelle `get_four_tuple` et affiche le tuple résultant. Exemple de sorties : "Valeur a1 : 2", "Valeur a2 : 4", "Valeur a3 : 7", "Valeur a4 : 3", "Tuple résultant : (2, 4, 3, 7)".
+
+=== Modules
+Outre les fonctions et objets natifs, de nombreuses fonctions et objets placés dans des _modules_ vous sont accessibles. De nombreux modules sont inclus dans la _bibliothèque standard_ de Python, et vous pouvez en télécharger plus encore. Par exemple, le module `random` permet de générer des données aléatoires. Il faut déclarer les modules que vous souhaitez utiliser : `import modulename as modulealias`. Cela vous donne accès aux fonctions déclarées dans le module, à invoquer avec l’alias du module suivi d’un point suivi du nom de la fonction déclarée dans le module.
+
+[source, python]
+----
+>>> import random as rd
+# Fonction `randrange` : un entier tiré uniformément dans un intervalle
+>>> rd.randrange(3, 8)
+5
+# Création de deux objets de type `Random`
+>>> r1 = rd.Random()
+>>> r2 = rd.Random()
+# Initialisation de ces objets (détermine la séquence générée ensuite)
+>>> r1.seed(3)
+>>> r2.seed(3)
+>>> r1.random()
+0.23796462709189137
+>>> r1.random()
+0.5442292252959519
+>>> r2.random()
+0.23796462709189137
+>>> r2.random()
+0.5442292252959519
+----
+
+== Python pour la régression linéaire
+=== Création et manipulation de vecteurs et matrices
+Le module _NumPy_ fournit un type pour représenter des vecteurs et des matrices.
+
+[source, python]
+----
+>>> import numpy as np
+# Un vecteur en NumPy : le paramètre du constructeur est une séquence
+>>> a = np.array([0, 1, 4])
+# Une matrice en NumPy : le paramètre est une séquence de séquences
+>>> m = np.array([(2, 4), (5, -1), (1, 1)])
+>>> m
+array([[ 2,  4],
+       [ 5, -1],
+       [ 1,  1]])
+# Un vecteur a un seul axe (une dimension), une matrice en a deux
+>>> a.ndim
+1
+>>> m.ndim
+2
+>>> a.shape
+(3,)
+>>> m.shape
+(3, 2)
+# Raccourcis pour matrices courantes :
+>>> j = np.ones([3, 2])
+>>> j
+array([[1., 1.],
+       [1., 1.],
+       [1., 1.]])
+>>> np.identity(3)
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+----
+
+Vous pouvez accéder à des éléments par index ou par tranche, comme pour toute séquence. Pour les matrices (à deux axes), vous pouvez utiliser deux ensembles d’indices (séparé par une virgule) pour spécifier la tranche.
+
+[source, python]
+----
+>>> a[2]
+4
+>>> a[0:2]
+array([0, 1])
+# Un élément d’une matrice est une ligne de cette matrice
+>>> m[1]
+array([ 5, -1])
+>>> m[0:2]
+?
+# Une paire d’indices peut être utilisée pour les structures à deux axes
+>>> m[0, 1]
+4
+# Une tranche de deux lignes et deux colonnes
+>>> m[1:3, 0:2]
+array([[ 5, -1],
+       [ 1,  1]])
+# Comment faire pour obtenir seulement la colonne 0 ?
+>>> ?
+----
+
+NumPy fournit des opérations et méthodes utiles sur ces structures.
+
+[source, python]
+----
+# L’addition et la soustraction matricielles fonctionnent comme attendu
+>>> m - j
+array([[ 1.,  3.],
+       [ 4., -2.],
+       [ 0.,  0.]])
+# Les opérations s’appliquent généralement entrée par entrée
+>>> m ** 2
+array([[ 4, 16],
+       [25,  1],
+       [ 1,  1]])
+# Transposer
+>>> m.T
+array([[ 2,  5,  1],
+       [ 4, -1,  1]])
+# Produit matriciel (ou scalaire) : utiliser @
+>>> a @ a
+17
+>>> np.ones([2, 3]) @ m
+?
+# Certaines opérations s’appliquent sur un axe (colonne, axe 0 ; ligne, axe 1)
+# Somme itérant sur chaque ligne
+>>> m.sum(axis=0)
+array([8, 4])
+# Min itérant sur chaque colonne
+>>> m.min(axis=1)
+array([ 2, -1,  1])
+----
+
+Exercice : calculez la déviation standard sur chaque colonne de la matrice d’entrées (par lignes) \((3, 2, 5), (1, 2, -1), (8, 9, 3), (1, 0, -3)\). Utiliser la méthode `std` et préciser l’axe d’application. Vous devriez obtenir \(2.86, 3.42, 3.16\). Calculez ensuite cette déviation standard sans utiliser la méthode `std`. N’utilisez pas de boucles explicites.
+
+=== Statistique
+La fonction `cov` calcule la matrice de variance-covariance, étant donnée une matrice où les variables sont en _ligne_. Préciser que `ddof` (le nombre de degrés de liberté) vaut zéro pour la covariance descriptive, sinon il divise par le nombre d’observations moins un (ce qui fournit une estimation non biaisée de la covariance). La méthode `var` calcule la variance le long d’un axe. La fonction `corrcoef` calcule les coefficients de corrélation entre toutes les paires de variables.
+
+[source, python]
+----
+>>> np.cov(m.T, ddof=0).round(2)
+array([[  0.89,  -1.78,   0.89],
+       [ -1.78,  14.22, -12.44],
+       [  0.89, -12.44,  11.56]])
+# Vérifions les variances
+>>> m.var(axis=0).round(2)
+array([ 0.89, 14.22, 11.56])
+>>> np.corrcoef(m.T).round(2)
+array([[ 1.  , -0.5 ,  0.28],
+       [-0.5 ,  1.  , -0.97],
+       [ 0.28, -0.97,  1.  ]])
+----
+
+Exercice : calculez le coefficient de corrélation de \(m\) sans utiliser la fonction `corrcoef`, en réduisant `m` puis en utilisant la fonction `cov`. N’utilisez pas de boucles explicites.
+
+=== Moindres carrés
+Le module SciPy contient un sous-module _linalg_, qui permet d’autres manipulations sur les structures de NumPy.
+
+La méthode `lstsq` calcule la droite des moindres carrés. Elle renvoie plusieurs valeurs, dont la première nous intéresse particulièrement : un vecteur contenant les valeurs de \(\beta_1, \beta_2\) (dans le cas d’une régression simple).
+
+[source, python]
+----
+>>> from scipy import linalg
+# TD 2, Exercice 2.2
+>>> A = np.array([3, 4, 6, 7, 9, 10, 9, 11, 12, 13, 15, 4])
+>>> B = np.array([8, 9, 10, 13, 15, 14, 13, 16, 13, 19, 6, 19])
+>>> X = np.array([len(A) * (1, ), A]).T
+>>> X
+array([[ 1,  3],
+       [ 1,  4],
+       [ 1,  6],
+       [ 1,  7],
+       [ 1,  9],
+       [ 1, 10],
+       [ 1,  9],
+       [ 1, 11],
+       [ 1, 12],
+       [ 1, 13],
+       [ 1, 15],
+       [ 1,  4]])
+>>> betas = linalg.lstsq(X, B)[0]
+>>> betas.round(2)
+array([11.99,  0.11])
+----
+
+Exercice : implémentez le calcul de la droite de régression sans utiliser la méthode `lstsq`.
+
+Exercice : calculez la droite de régression sans les deux derniers points.
+
+=== Autres opérations linéaires
+
+[source, python]
+----
+>>> m = np.array([(3, -2, 7), (1, 6, 1), (3, 6, -1)])
+>>> m_inv = linalg.inv(m)
+>>> m_inv.round(2)
+array([[ 0.09, -0.31,  0.34],
+       [-0.03,  0.19, -0.03],
+       [ 0.09,  0.19, -0.16]])
+>>> (m_inv @ m).round(2)
+array([[ 1.,  0.,  0.],
+       [-0.,  1., -0.],
+       [-0., -0.,  1.]])
+# eig renvoie une paire, dont le premier élément est le vecteur des valeurs propres, et dont le deuxième élément est le vecteur de vecteurs propres unitaires (dans l’ordre correspondant à l’ordre des valeurs propres)
+>>> linalg.eig(m)[0]
+array([-4.+0.j,  4.+0.j,  8.+0.j])
+>>> e_vects = linalg.eig(m)[1]
+>>> e_vects.round(2)
+array([[ 0.71, -0.89, -0.58],
+       [-0.  ,  0.45, -0.58],
+       [-0.71, -0.  , -0.58]])
+# Vérifions le premier vecteur propre
+>>> u1 = e_vects[0:3, 0]
+>>> (m @ u1).round(2)
+array([-2.83, -0.  ,  2.83])
+>>> (-4 * u1).round(2)
+array([-2.83,  0.  ,  2.83])
+----
+
+== Affichage
+[source, python]
+----
+>>> import matplotlib.pyplot as plt
+# Active le mode interactif
+>>> plt.ion()
+# Crée une figure et un objet ax pour recevoir des diagrammes ("plots")
+>>> fig, ax = plt.subplots()
+>>> abscissa = A
+>>> ordinate_plot = B
+>>> ax.plot(abscissa, ordinate_plot, 'o')
+>>> ordinate_regr = betas[0] + betas[1] * A
+>>> ax.plot(A, ordinate_regr)
+# Effacer les diagrammes
+>>> ax.clear()
+----
+
+Exercice : ajoutez aux deux diagrammes un diagramme montrant la droite de régression résultant du retrait des deux points mal alignés.
+
+== Références
+* https://docs.python.org/[Python documentation]
+* https://docs.scipy.org/doc/numpy/[NumPy Manual]
+* https://docs.scipy.org/doc/scipy/reference/[SciPy Reference Guide]
+
