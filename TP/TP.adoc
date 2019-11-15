@@ -23,16 +23,10 @@ Les expressions les plus simples sont : un entier, une chaine, un réel…
 ----
 >>> 3
 3
->>> type(3)
-int
 >>> 3.0
 3.0
->>> type(3.0)
-float
 >>> 'Hello, world.'
 'Hello, world.'
->>> type('Hello')
-str
 ----
 
 === Types et opérations
@@ -54,7 +48,7 @@ int
 str
 >>> 'Hello' + ', world' + '.'
 >>> '3' + '2'
-?
+# ?
 ----
 
 === Variables
@@ -85,7 +79,7 @@ False
 >>> a = True
 >>> b = False
 >>> (a or b) and (b or b)
-?
+# ?
 ----
 
 === Séquences
@@ -162,7 +156,7 @@ Hello, world
 >>> add_numbers((3, 2))
 TypeError: add_numbers() missing 1 required positional argument: 'y'
 >>> add_numbers((3, 2), (4, 4))
-?
+# ?
 ----
 
 Un objet offre également des _méthodes_ (c-à-d une fonction s’exécutant dans le contexte d’un objet donné). Une méthode `count` est définie sur les séquences. On appelle une méthode avec l’objet suivi d’un `.` puis le nom de méthode puis les paramètres entre parenthèses.
@@ -274,7 +268,7 @@ array([0, 1])
 >>> m[1]
 array([ 5, -1])
 >>> m[0:2]
-?
+# ?
 # Une paire d’indices peut être utilisée pour les structures à deux axes
 >>> m[0, 1]
 4
@@ -308,7 +302,7 @@ array([[ 2,  5,  1],
 >>> a @ a
 17
 >>> np.ones([2, 3]) @ m
-?
+# ?
 # Certaines opérations s’appliquent sur un axe (colonne, axe 0 ; ligne, axe 1)
 # Somme itérant sur chaque ligne
 >>> m.sum(axis=0)
