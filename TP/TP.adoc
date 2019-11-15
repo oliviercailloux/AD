@@ -61,7 +61,7 @@ Une variable a une valeur et donc un type (affecté dynamiquement). *Conseil* : 
 >>> a = 3
 >>> a + 4
 7
-# À ne pas faire : change le type !
+# À ne pas faire dans un programme : change le type
 >>> a = 'Hello'
 >>> type(a)
 str
