@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_branchement_et_blocs">Branchement et blocs</a></li>
 <li><a href="#_fonctions_méthodes">Fonctions, méthodes</a></li>
 <li><a href="#_complétion">Complétion</a></li>
-<li><a href="#_exercice">Exercice</a></li>
+<li><a href="#_exercice_fct">Exercice FCT</a></li>
 <li><a href="#_modules">Modules</a></li>
 </ul>
 </li>
@@ -640,7 +640,7 @@ False
 <div class="sect2">
 <h3 id="_branchement_et_blocs">Branchement et blocs</h3>
 <div class="paragraph">
-<p>Utiliser <code>if (boolean)</code> pour exécuter une instruction conditionnellement à la valeur de l’expression <code>boolean</code>. Suivi par un <em>bloc</em>. Un bloc commence par <code>:</code> et est composé d’un ensemble d’expressions <em>indenté</em>. Indentation recommandée : quatre espaces.</p>
+<p>Utiliser <code>if (boolean)</code> pour exécuter une instruction conditionnellement à la valeur de l’expression <code>boolean</code>. Suivi par un <em>bloc</em>. Un bloc commence par <code>:</code> et est composé d’un ensemble d’expressions <em>indenté</em> (c-à-d, précédé par un nombre d’espaces constant). Indentation recommandée : quatre espaces.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -715,7 +715,7 @@ True</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_exercice">Exercice</h3>
+<h3 id="_exercice_fct">Exercice FCT</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -862,7 +862,7 @@ array([ 2, -1,  1])</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Exercice : calculez la déviation standard sur chaque colonne de la matrice d’entrées (par lignes) \((3, 2, 5), (1, 2, -1), (8, 9, 3), (1, 0, -3)\). Utiliser la méthode <code>std</code> et préciser l’axe d’application. Vous devriez obtenir \(2.86, 3.42, 3.16\). Calculez ensuite cette déviation standard sans utiliser la méthode <code>std</code>. N’utilisez pas de boucles explicites.</p>
+<p>Exercice DEV : calculez la déviation standard sur chaque colonne de la matrice d’entrées (par lignes) \((3, 2, 5), (1, 2, -1), (8, 9, 3), (1, 0, -3)\). Utiliser la méthode <code>std</code> et préciser l’axe d’application. Vous devriez obtenir \(2.86, 3.42, 3.16\). Calculez ensuite cette déviation standard sans utiliser la méthode <code>std</code>. N’utilisez pas de boucles explicites.</p>
 </div>
 </div>
 <div class="sect2">
@@ -886,7 +886,7 @@ array([[ 1.  , -0.5 ,  0.28],
 </div>
 </div>
 <div class="paragraph">
-<p>Exercice : calculez le coefficient de corrélation de \(m\) sans utiliser la fonction <code>corrcoef</code>, en réduisant <code>m</code> puis en utilisant la fonction <code>cov</code>. N’utilisez pas de boucles explicites.</p>
+<p>Exercice CORR : calculez le coefficient de corrélation de \(m\) sans utiliser la fonction <code>corrcoef</code>, en réduisant <code>m</code> puis en utilisant la fonction <code>cov</code>. N’utilisez pas de boucles explicites.</p>
 </div>
 </div>
 <div class="sect2">
@@ -923,10 +923,10 @@ array([11.99,  0.11])</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Exercice : implémentez le calcul de la droite de régression sans utiliser la méthode <code>lstsq</code>.</p>
+<p>Exercice REGR-MAN : implémentez le calcul de la droite de régression sans utiliser la méthode <code>lstsq</code>.</p>
 </div>
 <div class="paragraph">
-<p>Exercice : calculez la droite de régression sans les deux derniers points.</p>
+<p>Exercice REGR-AGAIN : calculez la droite de régression sans les deux derniers points.</p>
 </div>
 </div>
 <div class="sect2">
@@ -982,7 +982,7 @@ array([-2.83,  0.  ,  2.83])</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Exercice : ajoutez aux deux diagrammes un diagramme montrant la droite de régression résultant du retrait des deux points mal alignés.</p>
+<p>Exercice SHOW : ajoutez aux deux diagrammes un diagramme montrant la droite de régression résultant du retrait des deux points mal alignés.</p>
 </div>
 </div>
 </div>
@@ -1007,7 +1007,7 @@ array([-2.83,  0.  ,  2.83])</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-18 15:58:02 +0100
+Last updated 2019-11-18 16:21:49 +0100
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">

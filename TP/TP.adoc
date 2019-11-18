@@ -137,7 +137,7 @@ False
 ----
 
 === Branchement et blocs
-Utiliser `if (boolean)` pour exécuter une instruction conditionnellement à la valeur de l’expression `boolean`. Suivi par un _bloc_. Un bloc commence par `:` et est composé d’un ensemble d’expressions _indenté_. Indentation recommandée : quatre espaces. 
+Utiliser `if (boolean)` pour exécuter une instruction conditionnellement à la valeur de l’expression `boolean`. Suivi par un _bloc_. Un bloc commence par `:` et est composé d’un ensemble d’expressions _indenté_ (c-à-d, précédé par un nombre d’espaces constant). Indentation recommandée : quatre espaces. 
 
 [source, python]
 ----
@@ -202,7 +202,7 @@ Après avoir tapé un nom de variable désignant un objet, et un point (et éven
               l.count
 ----
 
-=== Exercice
+=== Exercice FCT
 * Définissez une fonction `get_ordered_pair` qui accepte deux entiers en paramètres et renvoie une paire (un tuple de deux éléments) composée du plus petit élément suivi du plus grand.
 * Définissez une fonction `get_four_tuple` qui accepte quatre entiers en paramètres et renvoie un tuple de quatre entiers, les deux premiers ordonnés entre eux et les deux suivants ordonnés entre eux. Votre fonction `get_four_tuple` doit appeler deux fois votre fonction `get_ordered_pair`.
 * Par exemple, `get_four_tuple(4, 2, 7, 3)` doit renvoyer `(2, 4, 3, 7)`.
@@ -325,7 +325,7 @@ array([8, 4])
 array([ 2, -1,  1])
 ----
 
-Exercice : calculez la déviation standard sur chaque colonne de la matrice d’entrées (par lignes) \((3, 2, 5), (1, 2, -1), (8, 9, 3), (1, 0, -3)\). Utiliser la méthode `std` et préciser l’axe d’application. Vous devriez obtenir \(2.86, 3.42, 3.16\). Calculez ensuite cette déviation standard sans utiliser la méthode `std`. N’utilisez pas de boucles explicites.
+Exercice DEV : calculez la déviation standard sur chaque colonne de la matrice d’entrées (par lignes) \((3, 2, 5), (1, 2, -1), (8, 9, 3), (1, 0, -3)\). Utiliser la méthode `std` et préciser l’axe d’application. Vous devriez obtenir \(2.86, 3.42, 3.16\). Calculez ensuite cette déviation standard sans utiliser la méthode `std`. N’utilisez pas de boucles explicites.
 
 === Statistique
 La fonction `cov` calcule la matrice de variance-covariance, étant donnée une matrice où les variables sont en _lignes_. Préciser que `ddof` (le nombre de degrés de liberté) vaut zéro pour la covariance descriptive, sinon il divise par le nombre d’observations moins un (ce qui fournit une estimation non biaisée de la covariance). La méthode `var` calcule la variance le long d’un axe. La fonction `corrcoef` calcule les coefficients de corrélation entre toutes les paires de variables.
@@ -345,7 +345,7 @@ array([[ 1.  , -0.5 ,  0.28],
        [ 0.28, -0.97,  1.  ]])
 ----
 
-Exercice : calculez le coefficient de corrélation de \(m\) sans utiliser la fonction `corrcoef`, en réduisant `m` puis en utilisant la fonction `cov`. N’utilisez pas de boucles explicites.
+Exercice CORR : calculez le coefficient de corrélation de \(m\) sans utiliser la fonction `corrcoef`, en réduisant `m` puis en utilisant la fonction `cov`. N’utilisez pas de boucles explicites.
 
 === Moindres carrés
 La bibliothèque SciPy contient un sous-module _linalg_, qui permet d’autres manipulations sur les structures de NumPy.
@@ -377,9 +377,9 @@ array([[ 1,  3],
 array([11.99,  0.11])
 ----
 
-Exercice : implémentez le calcul de la droite de régression sans utiliser la méthode `lstsq`.
+Exercice REGR-MAN : implémentez le calcul de la droite de régression sans utiliser la méthode `lstsq`.
 
-Exercice : calculez la droite de régression sans les deux derniers points.
+Exercice REGR-AGAIN : calculez la droite de régression sans les deux derniers points.
 
 === Autres opérations linéaires
 
@@ -428,7 +428,7 @@ array([-2.83,  0.  ,  2.83])
 >>> ax.clear()
 ----
 
-Exercice : ajoutez aux deux diagrammes un diagramme montrant la droite de régression résultant du retrait des deux points mal alignés.
+Exercice SHOW : ajoutez aux deux diagrammes un diagramme montrant la droite de régression résultant du retrait des deux points mal alignés.
 
 == Références
 * https://docs.python.org/[Python documentation]
