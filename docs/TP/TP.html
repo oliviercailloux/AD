@@ -444,6 +444,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_variables">Variables</a></li>
 <li><a href="#_booléens">Booléens</a></li>
 <li><a href="#_séquences">Séquences</a></li>
+<li><a href="#_branchement_et_blocs">Branchement et blocs</a></li>
 <li><a href="#_fonctions_méthodes">Fonctions, méthodes</a></li>
 <li><a href="#_complétion">Complétion</a></li>
 <li><a href="#_exercice">Exercice</a></li>
@@ -637,9 +638,25 @@ False
 </div>
 </div>
 <div class="sect2">
+<h3 id="_branchement_et_blocs">Branchement et blocs</h3>
+<div class="paragraph">
+<p>Utiliser <code>if (boolean)</code> pour exécuter une instruction conditionnellement à la valeur de l’expression <code>boolean</code>. Suivi par un <em>bloc</em>. Un bloc commence par <code>:</code> et est composé d’un ensemble d’expressions <em>indenté</em>. Indentation recommandée : quatre espaces.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-python" data-lang="python">&gt;&gt;&gt; a = True
+&gt;&gt;&gt; if (a):
+&gt;&gt;&gt;     print('Hello')
+&gt;&gt;&gt;     print('… world')
+Hello
+… world</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_fonctions_méthodes">Fonctions, méthodes</h3>
 <div class="paragraph">
-<p>Fonctions : en-tête utilisant le mot clé <code>def</code>, et noms des paramètres entre parenthèses. Suivi par un <em>bloc</em>. Un bloc commence par <code>:</code> et est composé d’un ensemble d’expressions <em>indenté</em>. Indentation recommandée : quatre espaces. Pour renvoyer une valeur, utiliser <code>return</code>.</p>
+<p>Fonctions : en-tête utilisant le mot clé <code>def</code>, et noms des paramètres entre parenthèses. Suivi par un bloc. Pour renvoyer une valeur, utiliser <code>return</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -990,7 +1007,7 @@ array([-2.83,  0.  ,  2.83])</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-15 18:45:28 +0100
+Last updated 2019-11-18 15:58:02 +0100
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">

@@ -136,8 +136,21 @@ False
 ([0, 4], [1], ['blah', 'bouh'])
 ----
 
+=== Branchement et blocs
+Utiliser `if (boolean)` pour exécuter une instruction conditionnellement à la valeur de l’expression `boolean`. Suivi par un _bloc_. Un bloc commence par `:` et est composé d’un ensemble d’expressions _indenté_. Indentation recommandée : quatre espaces. 
+
+[source, python]
+----
+>>> a = True
+>>> if (a):
+>>>     print('Hello')
+>>>     print('… world')
+Hello
+… world
+----
+
 === Fonctions, méthodes
-Fonctions : en-tête utilisant le mot clé `def`, et noms des paramètres entre parenthèses. Suivi par un _bloc_. Un bloc commence par `:` et est composé d’un ensemble d’expressions _indenté_. Indentation recommandée : quatre espaces. Pour renvoyer une valeur, utiliser `return`.
+Fonctions : en-tête utilisant le mot clé `def`, et noms des paramètres entre parenthèses. Suivi par un bloc. Pour renvoyer une valeur, utiliser `return`.
 
 [source, python]
 ----
