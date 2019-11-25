@@ -18,5 +18,8 @@ Ce cours d’analyse de données utilise des supports créés par Jamal Atif. No
 * https://www.lamsade.dauphine.fr/~atif/doku.php?id=teaching:l3[Page] du cours de Jamal Atif, d’où ce cours est tiré
 * http://www.lpsm.paris/pageperso/guyader/polysM.html[Régression Linéaire], cours de Guyader, dont une partie du cours de Jamal s’inspire
 * https://link.springer.com/book/10.1007/978-2-8178-0184-1[Régression avec R], dont le cours de Guyader s’inspire
-// * https://machinelearningmastery.com/calculate-principal-component-analysis-scratch-python/
+// * https://machinelearningmastery.com/calculate-principal-component-analysis-scratch-python/ ?
+// https://towardsdatascience.com/principal-component-analysis-for-dimensionality-reduction-115a3d157bad ?
+// http://www.nonlinear.com/support/progenesis/lc-ms/faq/v4.1/pca.aspx ?
+// https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
 

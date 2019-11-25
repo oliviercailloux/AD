@@ -464,13 +464,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>\[A=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 2 \\ 2 &amp; 2 &amp; 1\\ 1 &amp;0 &amp; 0\\ 2 &amp; 3 &amp; 2\end{array}\right)\]</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Calculer \(g\) (le centre de gravité), \(Y\) (la matrice des données centrées) et \(V\) (la matrice de covariances).</p>
 </li>
 <li>
-<p>Vérifier que \(\left(\begin{array}{c} 1\\-1\\1 \end{array}\right)\) et \(\left(\begin{array}{c} 1\\0\\-1 \end{array}\right)\) sont vecteurs propres de \(V\), en indiquant  les valeurs propres associées. En déduire le troisième vecteur propre de \(V\) et la valeur propre correspondante.</p>
+<p>Vérifier que \(v_1 = \left(\begin{array}{c} 1\\-1\\1 \end{array}\right)\) et \(v_2 = \left(\begin{array}{c} 1\\0\\-1 \end{array}\right)\) sont vecteurs propres de \(V\), en indiquant  les valeurs propres associées. En déduire le troisième vecteur propre de \(V\) et la valeur propre correspondante.</p>
 </li>
 <li>
 <p>À partir des résultats précédents, déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus associé au tableau \(X\). Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l’axe considéré, et la part d’inertie qu’il explique.</p>
@@ -485,19 +485,64 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.</p>
 </li>
 <li>
-<p>Représenter graphiquement le nuage des variables \(N(V)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?</p>
+<p>Calculer les coordonnées des variables \(N(V)\) dans le plan factoriel défini par les deux premiers axes factoriels.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acp_métrique">ACP métrique</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On considère la matrice de données suivante :</p>
+</div>
+<div class="paragraph">
+<p>\[A=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 1\\0 &amp; 1 &amp; 2 \\ 2 &amp; 1 &amp; 1\\ 1 &amp;0 &amp; 0\\ 2 &amp; 3 &amp; 2\end{array}\right)\]</p>
+</div>
+<div class="paragraph">
+<p>et la métrique définie par :</p>
+</div>
+<div class="paragraph">
+<p>\[M=\left(\begin{array}{ccc}\frac{1}{\text{Var}(\mathbf{a}^1)} &amp; 0 &amp; 0 \\0 &amp;\frac{1}{\text{Var}(\mathbf{a}^2)} &amp; 0\\0 &amp; 0&amp; \frac{1}{\text{Var}(\mathbf{a}^3)} \end{array}\right)\]</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Calculer \(g\) (le centre de gravité), \(Y\) (la matrice des données centrées) et \(V\) (la matrice de covariances).</p>
 </li>
 <li>
-<p>Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.</p>
+<p>Donner une interprétation à la matrice \(VM\).</p>
 </li>
-</ul>
+<li>
+<p>Déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus. Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l&#8217;axe considéré, et la part d’inertie qu’il explique.</p>
+</li>
+<li>
+<p>Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.</p>
+</li>
+<li>
+<p>Représenter graphiquement le nuage des variables \(N(V)\) sur le plan factoriel défini par les deux premiers axes factoriels.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note. Les valeurs propres de \(VM\) sont \([1 + \sqrt{5/6}, 1, 1 - \sqrt{5/6}]\) et les vecteurs propres associés sont (en colonnes) \[\left(\begin{array}{ccc}1/2 &amp; 2 &amp; 1/2 \\\sqrt{15/8} &amp; 0 &amp; -\sqrt{15/8}\\1 &amp; -1 &amp; 1\end{array}\right).\]
+Les projections des individus (centrés) sur les vecteurs propres, avec la métrique \(M\), sont :
+\[\left(\begin{array}{ccc}
+-1.4817 &amp;  0.5477 &amp; -0.0675\\
+-0.3873 &amp; -1.0954 &amp; -0.3873\\
+ 0.3873 &amp; -1.6432 &amp;  0.3873\\
+ 0.3873 &amp;  1.0954 &amp;  0.3873\\
+-1.4817 &amp;  0.5477 &amp; -0.0675\\
+ 2.5761 &amp;  0.5477 &amp; -0.2523
+\end{array}\right).\]</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-11-13 14:54:12 +0100
+Last updated 2019-11-25 13:17:54 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">

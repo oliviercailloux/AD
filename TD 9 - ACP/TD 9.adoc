@@ -22,12 +22,42 @@ On considère la matrice de données suivante :
 
 \[A=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 0 & 1\\0 & 1 & 2 \\ 2 & 2 & 1\\ 1 &0 & 0\\ 2 & 3 & 2\end{array}\right)\]
 
-* Calculer \(g\) (le centre de gravité), \(Y\) (la matrice des données centrées) et \(V\) (la matrice de covariances).
-* Vérifier que \(\left(\begin{array}{c} 1\\-1\\1 \end{array}\right)\) et \(\left(\begin{array}{c} 1\\0\\-1 \end{array}\right)\) sont vecteurs propres de \(V\), en indiquant  les valeurs propres associées. En déduire le troisième vecteur propre de \(V\) et la valeur propre correspondante.
-* À partir des résultats précédents, déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus associé au tableau \(X\). Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l’axe considéré, et la part d’inertie qu’il explique.
-* Calculer les composantes principales pour chaque individu.
- * Représenter graphiquement le nuage \(N(I)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
-* Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
-* Représenter graphiquement le nuage des variables \(N(V)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
-* Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+. Calculer \(g\) (le centre de gravité), \(Y\) (la matrice des données centrées) et \(V\) (la matrice de covariances).
+. Vérifier que \(v_1 = \left(\begin{array}{c} 1\\-1\\1 \end{array}\right)\) et \(v_2 = \left(\begin{array}{c} 1\\0\\-1 \end{array}\right)\) sont vecteurs propres de \(V\), en indiquant  les valeurs propres associées. En déduire le troisième vecteur propre de \(V\) et la valeur propre correspondante.
+. À partir des résultats précédents, déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus associé au tableau \(X\). Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l’axe considéré, et la part d’inertie qu’il explique.
+. Calculer les composantes principales pour chaque individu.
+. Représenter graphiquement le nuage \(N(I)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
+. Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+. Calculer les coordonnées des variables \(N(V)\) dans le plan factoriel défini par les deux premiers axes factoriels.
+// Représenter graphiquement les variables dans ce plan. Que peut-on dire de cette représentation graphique ?
+// . Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+
+== ACP métrique
+On considère la matrice de données suivante :
+
+\[A=\left(\begin{array}{ccc}1 & 0 & 0 \\0 & 1 & 1\\0 & 1 & 2 \\ 2 & 1 & 1\\ 1 &0 & 0\\ 2 & 3 & 2\end{array}\right)\]
+
+et la métrique définie par :
+
+\[M=\left(\begin{array}{ccc}\frac{1}{\text{Var}(\mathbf{a}^1)} & 0 & 0 \\0 &\frac{1}{\text{Var}(\mathbf{a}^2)} & 0\\0 & 0& \frac{1}{\text{Var}(\mathbf{a}^3)} \end{array}\right)\]
+
+. Calculer \(g\) (le centre de gravité), \(Y\) (la matrice des données centrées) et \(V\) (la matrice de covariances).
+. Donner une interprétation à la matrice \(VM\).
+. Déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus. Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l'axe considéré, et la part d’inertie qu’il explique.
+//. Représenter graphiquement le nuage \(N(I)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
+. Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+. Représenter graphiquement le nuage des variables \(N(V)\) sur le plan factoriel défini par les deux premiers axes factoriels.
+// Que peut-on dire de cette représentation graphique ?
+//. Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+
+Note. Les valeurs propres de \(VM\) sont \([1 + \sqrt{5/6}, 1, 1 - \sqrt{5/6}]\) et les vecteurs propres associés sont (en colonnes) \[\left(\begin{array}{ccc}1/2 & 2 & 1/2 \\\sqrt{15/8} & 0 & -\sqrt{15/8}\\1 & -1 & 1\end{array}\right).\]
+Les projections des individus (centrés) sur les vecteurs propres, avec la métrique \(M\), sont :
+\[\left(\begin{array}{ccc}
+-1.4817 &  0.5477 & -0.0675\\
+-0.3873 & -1.0954 & -0.3873\\
+ 0.3873 & -1.6432 &  0.3873\\
+ 0.3873 &  1.0954 &  0.3873\\
+-1.4817 &  0.5477 & -0.0675\\
+ 2.5761 &  0.5477 & -0.2523
+\end{array}\right).\]
 
