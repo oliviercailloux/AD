@@ -27,7 +27,8 @@ On considère la matrice de données suivante :
 . À partir des résultats précédents, déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus associé au tableau \(X\). Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l’axe considéré, et la part d’inertie qu’il explique.
 . Calculer les composantes principales pour chaque individu.
 . Représenter graphiquement le nuage \(N(I)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
-. Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+. Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ?
+// Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
 . Calculer les coordonnées des variables \(N(V)\) dans le plan factoriel défini par les deux premiers axes factoriels.
 // Représenter graphiquement les variables dans ce plan. Que peut-on dire de cette représentation graphique ?
 // . Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
@@ -45,7 +46,8 @@ et la métrique définie par :
 . Donner une interprétation à la matrice \(VM\).
 . Déterminer les deux axes factoriels non triviaux de l’ACP  du nuage \(N(I)\) des individus. Pour chacun de ces axes, préciser l’inertie du nuage projeté sur l'axe considéré, et la part d’inertie qu’il explique.
 //. Représenter graphiquement le nuage \(N(I)\) sur le plan factoriel défini par les deux premiers axes factoriels. Que peut-on dire de cette représentation graphique ?
-. Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
+. Quel est l’individu qui contribue le plus à l’inertie du premier axe factoriel ?
+// Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
 . Représenter graphiquement le nuage des variables \(N(V)\) sur le plan factoriel défini par les deux premiers axes factoriels.
 // Que peut-on dire de cette représentation graphique ?
 //. Quelle est la variable qui contribue le plus à l’inertie du premier axe factoriel ? Calculer sa qualité de représentation sur chacun des deux axes factoriels non triviaux.
